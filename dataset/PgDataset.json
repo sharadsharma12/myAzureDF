@@ -1,0 +1,30 @@
+{
+	"name": "PgDataset",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "PGAdminLinkedServices",
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"DBName": {
+				"type": "string"
+			},
+			"TableName": {
+				"type": "string"
+			}
+		},
+		"annotations": [],
+		"type": "PostgreSqlTable",
+		"schema": [],
+		"typeProperties": {
+			"schema": {
+				"value": "@dataset().DBName",
+				"type": "Expression"
+			},
+			"table": {
+				"value": "@dataset().TableName",
+				"type": "Expression"
+			}
+		}
+	}
+}
