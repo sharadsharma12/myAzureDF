@@ -1,0 +1,22 @@
+{
+	"name": "SourceTxt",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureSourceSinkLS",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"folderPath": "source",
+				"fileSystem": "mycontainer86"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"quoteChar": "\""
+		},
+		"schema": []
+	}
+}
